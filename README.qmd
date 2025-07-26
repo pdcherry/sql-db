@@ -1,0 +1,32 @@
+---
+title: "README"
+author: "Patrick Cherry"
+date: 2025-07-26
+format: gfm
+---
+
+## sql-db mini package
+SQL databases for practicing 
+
+### Set Up
+In R, run:
+```
+source("R/0_initalize_env_and_first_db.R")
+```
+
+### Practicing
+```{r}
+source("R/1_load_first_duckdb.R")
+
+con <- dbConnect(duckdb(),
+                 dbdir = fs::path("nycflights13-duckdb", "nycflights13.duckdb"),
+                 read_only = FALSE)
+```
+
+## Run you query
+```{r}
+test_query <- "SELECT * FROM airlines LIMIT 10"
+
+dbGetQuery(con, test_query)
+```
+

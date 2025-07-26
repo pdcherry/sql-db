@@ -1,3 +1,9 @@
+# Custom for this project
+**/nycflights13-duckdb
+
+# Large data files
+*.duckdb
+
 # Example code in package build process
 *-Ex.R
 
