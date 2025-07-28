@@ -49,3 +49,10 @@ dbGetQuery(con, test_query)
     8       FL AirTran Airways Corporation
     9       HA      Hawaiian Airlines Inc.
     10      MQ                   Envoy Air
+
+## Some example course problem sets
+
+[SQL-and-Tableau-project—NYC-Flights](https://github.com/clairehutin/SQL-and-Tableau-project---NYC-Flights)
+
+[Wake Forest Uni SQL
+class](https://sta279-f23.github.io/class_activities/ca_lecture_18.html)
