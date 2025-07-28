@@ -1,4 +1,4 @@
----
+z---
 title: "README"
 author: "Patrick Cherry"
 date: 2025-07-26
@@ -23,10 +23,14 @@ con <- dbConnect(duckdb(),
                  read_only = FALSE)
 ```
 
-## Run you query
+## Run your query
 ```{r}
 test_query <- "SELECT * FROM airlines LIMIT 10"
 
 dbGetQuery(con, test_query)
 ```
 
+## Some example course problem sets
+[SQL-and-Tableau-project---NYC-Flights](https://github.com/clairehutin/SQL-and-Tableau-project---NYC-Flights)
+
+[Wake Forest Uni SQL class](https://sta279-f23.github.io/class_activities/ca_lecture_18.html)

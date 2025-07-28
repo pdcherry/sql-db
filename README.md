@@ -30,7 +30,7 @@ con <- dbConnect(duckdb(),
                  read_only = FALSE)
 ```
 
-## Run you query
+## Run your query
 
 ``` r
 test_query <- "SELECT * FROM airlines LIMIT 10"
