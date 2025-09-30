@@ -15,17 +15,22 @@ attach_install <- function(...){
 attach_install("duckdb")
 attach_install("DBI")
 attach_install("fs")
+attach_install("here")
 
 # load duckdb connection
 con <- dbConnect(duckdb(),
-                 dbdir = fs::path("nycflights13-duckdb", "nycflights13.duckdb"),
+                 dbdir = fs::path(here::here(), "nycflights13-duckdb", "nycflights13.duckdb"),
                  read_only = FALSE)
+
+# fgure out which tables are present
+dbGetQuery(con, "SHOW TABLES")
 
 # run first test query
 test_query <- "SELECT * FROM airlines LIMIT 10"
 
 # Run the following on your own:
 dbGetQuery(con, test_query)
+
 dbGetQuery(con,
            "SELECT * FROM pg_tables")
 dbGetQuery(con, "FROM flights LIMIT 10")
